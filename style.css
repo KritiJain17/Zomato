@@ -1,0 +1,648 @@
+   /*universal selector*/
+   *{ padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*with padding, the dimension of box might appear bigger if box sizing is not applied */
+}
+body{
+  font-family: "Merriweather",sans-serif;
+  /*font family,generic family*/
+  background-color: #ebf2ff;
+  overflow-x: hidden;
+  /*content goes out of width of screen*/
+  transition: 0.5s;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}
+
+section{
+  margin: 4rem 0;/*1rem=16px*/
+
+}
+
+.container{
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+
+.navbar{
+  position:sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafc;
+  box-shadow:  0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+   z-index: 9999;
+}
+
+.navbar_brand{
+  width: 100px;
+
+}
+.brand_logo{
+  width: 100%;
+}
+
+.navbar_nav_items{
+  display: flex;
+}
+
+.button_primary{
+  background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+}
+.button_primary{
+  margin:10px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.5s;
+  font-weight: 600;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #eee;
+  display: block;
+}
+
+.button_primary:hover{
+  background-position: right center;
+  color: #fff;
+  text-decoration:none;
+}
+
+.hero_image_container{
+  position: relative;
+  width: 100%;
+}
+
+.hero_image{
+  position: absolute;
+  width: 100%;
+  right: auto;
+  left: auto;
+  z-index: 2;
+  border-radius: 6px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)
+  ;
+}
+
+.hero_image_shape{
+  position: absolute;
+  right: 2;
+}
+
+.hero_description{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero_text{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #1d3557;
+  font-weight: 900;
+}
+
+.video_footage_container{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video_footage{
+  position: relative;
+}
+
+.video_footage::before{
+  background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(1rem,1rem);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.video_footage_text{
+  margin-top: 2rem;
+  color: #1d3557;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.food_list_container{
+  position: relative;
+  margin: 5rem 0;
+}
+
+.food_menu_card_list{
+  width:100%;
+}
+
+.food_menu_card_image{
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+}
+
+.food_menu_card_details{
+  padding: 1rem;
+  text-align: left ;
+  color:#1d3557
+}
+
+.food_menu_card_title{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color:#1d3557;
+  font-weight:900;
+}
+
+.restaurant_list_container{
+  margin-top: 3rem;
+}
+
+.restaurant_list_text{
+  margin:1rem 0;
+}
+
+.restaurant_list_row_1{
+  display: flex;
+  align-items: baseline;
+}
+
+.restaurant_list_row_2{
+margin-top: 10px;
+display: flex;
+align-items: flex-start;
+flex-direction: row-reverse;
+}
+
+.restaurant1,
+.restaurant3{
+  border-radius: 4px;
+  margin: 0 5px;
+  width: 150px;
+  height:80px;
+  box-shadow:0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.restaurant2,
+.restaurant4{
+  border-radius: 4px;
+  margin: 0 5px;
+  width:200px;
+  height: 100px;
+  box-shadow:0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.input_box{
+  border: 1px solid #ee89a0;
+    background-color: #fcedf0;
+    color: #1d3557;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.text1{
+  margin: 2rem 0;
+  transition: 0.3s;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  background: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+}
+.input_box {
+  border: 1px solid #ee89a0;
+    background-color: #fcedf0;
+    color: #1d3557;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.update {
+  display: flex;
+
+    justify-content: center;
+}
+
+.update_text{
+  text-align:center;
+  font-size: 20px;
+  color: #1D3557;
+  font-weight: bold;
+}
+
+.quote_img{
+  margin:auto;
+  height: 300px;
+  width: 100%;
+  justify-content:center;
+}
+
+.quote_image{
+  /*width: 1000px;
+  height: 250px;
+  margin: auto;
+  border-radius: 10px;*/
+  position: relative;
+
+    height: 18.75rem;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #0a4065;
+    opacity: 38%;
+
+}
+.quotetext {
+  
+  position: relative;
+  text-align: center;
+  top: -10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; 
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  
+  
+}
+
+.quote__container {
+    height: 18.75rem;
+    width: 48rem;
+  }
+
+  .gradbg {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+    /*height: 15rem;*/
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .zomatologo{
+    font-family: "Merriweather";
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    align-items: center;
+    color:white;
+    font-size: 4rem;
+    font-weight: 6000;
+    line-height: 2.5;
+  }
+  .ullist {
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-left: auto;
+    margin-right: 300px;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+
+
+@media (min-width: 768px){
+  .hero_image{
+     margin-top: 2rem;
+  }
+  .hero_container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .hero_text{
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .video_footage_text{
+    margin-left: 2rem;
+  }
+  .video_footage{
+    margin-right: 2rem;
+  }
+  .food_list_container{
+    position:relative;
+    margin: 5rem 0;
+  }
+  .food_menu_card_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+  }
+  .food_menu_card{
+    flex-basis: 30%;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  .food_menu_card_move_up{
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .food_list_container_diagonal{
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    transform: skewY(-5deg);
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+    z-index: -3;
+  }
+  .restaurant_list_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant_list_row_1{
+    justify-content: center;
+  }
+  .restaurant_list_row_2{
+    margin-top: 3px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .text1{
+    /*text-align: center;
+    padding: 30px;
+    margin-top: 3rem;
+    cursor: pointer;
+    color:white;*/
+    background: none;
+  }
+  .text1:hover{
+    background-color: white;
+    color: #dd2476;
+    margin-top: 3rem;
+    /*margin-top: 10px;*/
+    margin-bottom: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+    
+    /*margin: 32px 0px;
+    padding: 16px;*/
+    
+    /*transition-property: width;
+    transition-property: height;*/
+  }
+
+  .text-x1{
+    
+    text-align:center;
+    font-size: 40px;
+    color: #1D3557;
+    font-weight: bold;
+  }
+  .update_text{
+    text-align:center;
+    font-size: 40px;
+    color: #1D3557;
+    font-weight: bold;
+  }
+  .input_box{
+    width: 20rem;
+  }
+  .update {
+    display: flex;
+    
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.quote_img{
+  margin:auto;
+  height: 300px;
+  width: 100%;
+  justify-content:center;
+}
+
+.quote_image{
+  /*width: 1000px;
+  height: 250px;
+  margin: auto;
+  border-radius: 10px;*/
+  position: relative;
+  margin:auto;
+    height: 300px;
+    width: 100%;
+    border-radius: 13px;
+    background-color: #0a4065;
+    opacity: 38%;
+
+}
+.quotetext {
+  
+  position: relative;
+  text-align: center;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; 
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  
+  
+}
+
+.quote__container {
+    height: 300px;
+    width: 100%;
+  }
+
+  .gradbg {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+    height: 250px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    display:flex;
+  }
+  .zomatologo{
+    font-family: "Merriweather";
+    justify-content: center;
+    display: block;
+    margin-left: 300px;
+    margin-right: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    align-items: center;
+    color:white;
+    font-size: 4rem;
+    font-weight: 6000;
+    line-height: 2.5;
+  }
+  .ullist {
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-left: auto;
+    margin-right: 300px;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+}
+
+
+@media (min-width: 1200px){
+  .container{
+    max-width: 1140px;
+  }
+  .navbar{
+    padding: 0 3rem;
+  }
+
+  .button_primary{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .hero_text{
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .video_footage_container{
+    display: flex;
+    flex-direction: column;
+  }
+  .video_footage_text{
+    width: 60%;
+  }
+
+  .food_menu_card_list{
+    margin-top: 2rem;
+  }
+  .text1{
+    margin-top: 4rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  .update_text{
+    text-align:center;
+    font-size: 40px;
+    color: #1D3557;
+    font-weight: bold;
+  }
+
+  .input_box{
+    width: 20rem;
+  }
+  .update {
+    display: flex;
+    
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.quote_img{
+  margin:auto;
+  height: 300px;
+  width: 100%;
+  justify-content:center;
+}
+
+.quote_image{
+  /*width: 1000px;
+  height: 250px;
+  margin: auto;
+  border-radius: 10px;*/
+  position: relative;
+  margin:auto;
+    height: 300px;
+    width: 100%;
+    border-radius: 13px;
+    background-color: #0a4065;
+    opacity: 38%;
+
+}
+.quotetext {
+  
+  position: relative;
+  text-align: center;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; 
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  
+  
+}
+
+.quote__container {
+    height: 300px;
+    width: 100%;
+  }
+
+  .gradbg {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%,#ff512f 100%);
+    height: 250px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    display:flex;
+  }
+  .zomatologo{
+    font-family: "Merriweather";
+    justify-content: center;
+    display: block;
+    margin-left: 300px;
+    margin-right: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    align-items: center;
+    color:white;
+    font-size: 4rem;
+    font-weight: 6000;
+    line-height: 2.5;
+  }
+  .ullist {
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-left: auto;
+    margin-right: 300px;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+}
+
+
+
+
+
